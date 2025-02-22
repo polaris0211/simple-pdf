@@ -70,7 +70,9 @@ export default function Root() {
           </Grid>
         ))}
       </Grid>
-      <Link to="/test">Test</Link>
+      <Link to="/test" viewTransition>
+        Test
+      </Link>
     </>
   );
 }
