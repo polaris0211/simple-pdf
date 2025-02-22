@@ -1,10 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import Root from "./pages/root.tsx";
 import "./index.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Pretendard from "../fonts/Pretendard.woff2";
 import Box from "@mui/material/Box";
+import { createHashRouter, RouterProvider } from "react-router";
+import Test from "./pages/test.tsx";
+const router = createHashRouter([
+  { path: "/", element: <Root /> },
+  { path: "/test", element: <Test /> },
+]);
 const theme = createTheme({
   typography: {
     fontWeightBold: 700,
@@ -42,7 +48,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Box sx={{ fontFamily: "Pretendard" }}>
-        <App />
+        <RouterProvider router={router} />
       </Box>
     </ThemeProvider>
   </React.StrictMode>

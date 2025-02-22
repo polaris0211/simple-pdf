@@ -6,6 +6,7 @@ import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
 import PrintIcon from "@mui/icons-material/Print";
 import ContentCutIcon from "@mui/icons-material/ContentCut";
+import { Link } from "react-router";
 type SvgIconComponent = OverridableComponent<SvgIconTypeMap> & {
   muiName: string;
 };
@@ -16,7 +17,7 @@ interface Action {
   //action: unknown;
 }
 
-function App() {
+export default function Root() {
   const actions: Action[] = [
     {
       name: "Double Slide Printing",
@@ -69,8 +70,7 @@ function App() {
           </Grid>
         ))}
       </Grid>
+      <Link to="/test">Test</Link>
     </>
   );
 }
-
-export default App;
