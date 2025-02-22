@@ -7,6 +7,9 @@ import Pretendard from "../fonts/Pretendard.woff2";
 import Box from "@mui/material/Box";
 const theme = createTheme({
   typography: {
+    fontWeightBold: 700,
+    fontWeightMedium: 400,
+    fontWeightLight: 200,
     fontFamily: [
       "Pretendard",
       "-apple-system",
